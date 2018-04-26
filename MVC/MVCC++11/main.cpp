@@ -19,12 +19,15 @@ int main()
     view.run();
     std::string str;
     std::default_random_engine  engine(time(nullptr));
-    std::uniform_int_distribution<> dis(1, 500);
+    std::uniform_int_distribution<> dis(1, 100);
+    int  waittime;
+    int i = 0;
     while(1)
     {
-        int  waittime = 1000*dis(engine);
+        i++;
+        waittime = 1000*dis(engine);
         usleep(waittime);
-        controller.HandleUserInput(std::to_string(waittime));
+        controller.HandleUserInput(std::to_string(i));
     }
 
     return 0;

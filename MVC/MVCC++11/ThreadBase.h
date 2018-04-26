@@ -5,6 +5,7 @@
 #include <mutex>
 #include <semaphore.h>
 class TaskBase;
+class PrintTask;
 
 
 class ThreadBase

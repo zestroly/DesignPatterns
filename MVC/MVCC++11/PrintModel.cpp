@@ -26,13 +26,13 @@ void PrintModel::Notify()
         (*it)->Update(this);
         ++it;
     }
-    std::cout <<"finish!"<<std::endl;
+    //std::cout<<"hello:"<<observerlist_.size()<<std::endl;
     return;
 }
 
-void PrintModel::GetPrintString(std::string& str)
+std::string PrintModel::GetPrintString()
 {
-    str = printstring_;
+    return printstring_;
 }
 
 void PrintModel::SetPrintString(const std::string& str)

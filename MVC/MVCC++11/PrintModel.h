@@ -10,7 +10,7 @@ class PrintModel: public ModelBase
 public:
     PrintModel();
     virtual ~PrintModel(void);
-    void GetPrintString(std::string& str);
+    std::string GetPrintString();
     void SetPrintString(const std::string &str);
     virtual void Attach(Observer* observer);
     virtual void Detach(Observer* observer);
